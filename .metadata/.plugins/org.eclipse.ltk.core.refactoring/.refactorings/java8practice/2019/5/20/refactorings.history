@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.functionalinterface.Shape&apos; to &apos;functionalinterfaceTest&apos;&#x0D;&#x0A;- Original project: &apos;java8practice&apos;&#x0D;&#x0A;- Original element: &apos;com.functionalinterface.Shape&apos;&#x0D;&#x0A;- Renamed element: &apos;com.functionalinterface.functionalinterfaceTest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Shape&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.functionalinterface{Shape.java[Shape" matchStrategy="1" name="functionalinterfaceTest" qualified="false" references="true" similarDeclarations="false" stamp="1557826032623" textual="false" version="1.0"/>
+</session>

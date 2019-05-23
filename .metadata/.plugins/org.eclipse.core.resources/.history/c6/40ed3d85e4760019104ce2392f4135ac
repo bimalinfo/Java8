@@ -1,0 +1,30 @@
+package com.java8practice.collection;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Sorting {
+
+	public static void main(String[] args) {
+		Employee e1=new Employee(11,"Bimal",1000);
+		Employee e2=new Employee(1,"Nirimal",500);
+		Employee e3=new Employee(21,"Samal",7000);
+		Employee e4=new Employee(3,"Jhon",4000);
+		List<Employee> listemp=new ArrayList<Employee>();
+		listemp.add(e1);
+		listemp.add(e2);
+		listemp.add(e3);
+		listemp.add(e4);
+		
+		System.out.println(listemp.get(0).name);
+		//List<Employee> l=listemp.stream().sorted((Employee e1,Employee e2)->e1.getSalary()>e2.getSalary()).collect(Collectors.toList());
+		List<Employee> l=listemp.stream().sorted((e5,e6)->((Integer)e5.getSalary()).compareTo(e6.getSalary())).collect(Collectors.toList());
+		
+		l.stream().forEach(s->{
+			System.out.println(s.getName());
+		});
+		
+	}
+
+}

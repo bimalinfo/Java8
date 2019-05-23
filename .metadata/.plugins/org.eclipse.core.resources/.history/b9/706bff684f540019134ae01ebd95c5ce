@@ -1,0 +1,24 @@
+package com.java8practice.collection;
+
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
+public class ArrayListDuplicateRemoval {
+
+	public static <T> void main(String[] args) {
+		List<String> list=new ArrayList<>();
+		list.add("s1");
+		list.add("s2");
+		list.add("s3");
+		list.add("s4");
+		list.add("s1");
+		list.add("s2");
+		
+		Set<T> set=new LinkedHashSet<>();
+		set.addAll(list);
+		
+	}
+
+}

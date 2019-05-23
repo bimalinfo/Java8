@@ -1,0 +1,5 @@
+package com.externalserver1;
+
+public class ExternalServer1Controller {
+
+}

@@ -1,0 +1,51 @@
+package com.java8practice.collection;
+
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
+/*public class ArrayListDuplicateRemoval {
+
+	public static <T> void main(String[] args) {
+		List<String> list=new ArrayList<>();
+		list.add("s1");
+		list.add("s2");
+		list.add("s3");
+		list.add("s4");
+		list.add("s1");
+		list.add("s2");
+		
+		Set<T> set=new LinkedHashSet<>();
+		set.addAll(list);
+		
+	}
+
+}
+*/
+public static <T> ArrayList<T> removeDuplicates(ArrayList<T> list) { 
+ 
+Set<T> set = new LinkedHashSet<>(); 
+set.addAll(list); 
+list.clear(); 
+list.addAll(set); 
+return list; 
+} 
+ 
+public static void main(String args[]) 
+    { 
+  
+        // Get the ArrayList with duplicate values 
+        ArrayList<Integer> 
+		list = new ArrayList<>( Arrays.asList(1, 10, 1, 2, 2, 3, 10, 3, 3, 4, 5, 5)); 
+		System.out.println("ArrayList with duplicates: "+ list); 
+  
+        // Remove duplicates 
+        ArrayList<Integer> 
+            newList = removeDuplicates(list); 
+  
+        // Print the ArrayList with duplicates removed 
+        System.out.println("ArrayList with duplicates removed: "
+                           + newList); 
+    } 
+} 

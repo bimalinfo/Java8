@@ -1,0 +1,79 @@
+package com.java8practice.collection;
+
+import java.util.concurrent.CountDownLatch;
+
+public class CountDownLatchmain {
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}
+abstract class baseservice implements Runnable{
+	private CountDownLatch cdl;
+	private boolean serviceUp;
+	private String serviceName;
+	public CountDownLatch getCdl() {
+		return cdl;
+	}
+	public void setCdl(CountDownLatch cdl) {
+		this.cdl = cdl;
+	}
+	public boolean isServiceUp() {
+		return serviceUp;
+	}
+	public void setServiceUp(boolean serviceUp) {
+		this.serviceUp = serviceUp;
+	}
+	public String getServiceName() {
+		return serviceName;
+	}
+	public void setServiceName(String serviceName) {
+		this.serviceName = serviceName;
+	}
+	
+	public abstract void verifyService();
+		
+	@Override
+	public void run(){
+		try{
+			serviceUp=true;
+		}catch(Exception e){
+			e.printStackTrace();
+			serviceUp=false;
+		}finally{
+			cdl.countDown();
+		}
+	}
+	
+}
+
+class networkservice extends baseservice{
+
+	@Override
+	public void verifyService(){
+		try{
+			Thread.sleep(2000);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}
+
+class databaseservice extends baseservice{
+
+	@Override
+	public void verifyService(){
+		try{
+			Thread.sleep(2000);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package com.java8practice.collection;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListDuplicateRemoval {
+
+	public static void main(String[] args) {
+		List<String> list=new ArrayList<String>();
+		list.add("s1");
+		list.add("s2");
+		list.add("s3");
+		list.add("s4");
+		list.add("s1");
+		list.add("s2");
+	}
+
+}

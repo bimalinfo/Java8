@@ -1,0 +1,10 @@
+package com.java8practice.collection;
+
+public class RemovingDuplicatesUsingStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

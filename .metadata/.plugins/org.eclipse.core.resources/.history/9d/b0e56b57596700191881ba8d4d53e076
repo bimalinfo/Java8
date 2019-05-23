@@ -1,0 +1,22 @@
+package com.externalserver1;
+
+import java.util.logging.Logger;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ExternalServer1Controller {
+
+	protected Logger logger = Logger
+			.getLogger(ExternalServer1Controller.class.getName());
+	
+	@RequestMapping("/external")
+	public String allEmployees() {
+		logger.info("External Server invoked");
+		logger.info("External Server11 ");
+		return "hello external Server1";
+	}
+}
+
+
